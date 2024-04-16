@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom concept</title>
+</head>
+<body style="background-color: #212121;color: aliceblue;">
+    <div class="parent">
+       <div class="day">monday</div>
+       <div class="day">tuesday</div>
+       <div class="day">wednesday</div>
+       <div class="day">thursday</div>
+       <div class="day">friday</div>
+       <div class="day">saturday</div>   
+        </div>
+
+        <script>
+           let pt= document.querySelector('.parent')
+        //    console.log(pt);
+        //    console.log(pt.children);
+           //iterate
+
+        //    for (let i= 0;i<pt.children.length; i++) {
+        //     console.log(pt.children[i].innerHTML)
+        //    }
+           pt.children[1].style.color="red";
+
+        //    console.log(pt.firstElementChild);
+        //    console.log(pt.lastElementChild.innerHTML);
+
+       let child= document.querySelector('.day');
+    //    console.log(child);
+    //    console.log(child.parentElement);
+    //    console.log(child.nextElementSibling);
+    //    console.log(child.lastElementChild);
+    
+
+    console.log("NODES:",pt.childNodes);
+
+
+    let x=document.querySelector(".parent")
+    console.log(x)
+     console.log("x.children")
+        </script>
+    
+</body>
+</html>

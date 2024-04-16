@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<body>
+    <div>
+        <h1>this is Ram</h1>
+        <button id="btn">start</button>
+        <button id="btn2">stop</button>
+    </div>
+</body>
+<script>
+    let  interval;
+     const inter=function(){
+        console.log("Rohit")
+    }
+
+
+   const start=document.querySelector('#btn').addEventListener
+   ('click',function(){
+     interval=setInterval(inter,1000)
+   })
+   const stop=document.querySelector('#btn2').addEventListener
+   ('click',function(){
+    clearInterval(interval)
+   })
+    
+    
+</script>
+</html>

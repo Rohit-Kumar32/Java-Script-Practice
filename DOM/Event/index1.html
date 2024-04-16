@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling propogation</title>
+</head>
+<body>
+      <div>
+        <ul id="image">
+            <li> <img width="200px" id="photo1" src="http://thewowstyle.com/wp-content/uploads/2015/07/autunm-desktop-natural-hd-wallpapers.jpg" alt="image1"></li>
+            <li><img width="200px" id="photo2" src="https://images.pexels.com/photos/46216/sunflower-flowers-bright-yellow-46216.jpeg?cs=srgb&dl=bloom-blossom-flora-46216.jpg&fm=jpg"></li>
+            <li> <img width="200px" id="photo3" src="https://images4.alphacoders.com/115/thumb-1920-115716.jpg"><li>
+        </ul>
+
+      </div>
+      <script>
+        //   document.getElementById('photo1').onclick=function(){
+        //     alert("photo1 clicked")
+        //   }
+        // document.getElementById('photo3').addEventListener('click',function(){
+        //     alert("photo 3 clicked")
+        //     event.stopPropagation()
+        // })
+
+        // document.getElementById('image').addEventListener('click',function(e){
+        //     alert("click inside image")
+            
+        // },false)
+        document.querySelector('#image').addEventListener('click',function(e){
+            console.log(e.target.tagname);
+            console.log(e.target.parentNode);
+            let removeIt = e.target.parentNode
+            removeIt.remove();
+        })
+      </script>
+</body>
+</html>

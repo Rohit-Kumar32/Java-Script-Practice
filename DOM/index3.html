@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove Element</title>
+</head>
+<body style="background-color: #212121;color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    
+</body>
+<script>
+    //add list element using function
+    function addLanguage(lang){
+      const li= document.createElement('li')
+       li.innerHTML=`${lang}`
+       document.querySelector('.language').
+       appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+
+   //optimize way to add list  element through function
+   function addlanguage1(lang1){
+    const li=document.createElement('li')
+    li.appendChild(document.createTextNode(lang1))
+    document.querySelector('.language').appendChild(li)
+   }
+   addlanguage1("golang")
+
+   //edit the list item
+  const secondlang= document.querySelector("li:nth-child(2)")
+  //secondlang.innerHTML="mojo"
+  const newli=document.createElement('li')
+  newli.textContent="mojo"
+  secondlang.replaceWith(newli)
+
+  //remove list item
+  const lastchild=document.querySelector("li:last-Child")
+  lastchild.remove()
+</script>
+</html>
